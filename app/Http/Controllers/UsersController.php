@@ -37,7 +37,7 @@ class UsersController extends Controller
             'userpasseconfirma.same' => 'As senhas não coincidem.',
         ]);
 
-        // Cria o usuário com senha *hashada*
+        // Cria o usuário com senha em *hash* 
         $user = UsersModel::create([
             'email' => $validated['usermail'],
             'senhas' => Hash::make($validated['userpasse']), // 🔐 nunca salve senhas em texto puro!

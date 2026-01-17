@@ -10,7 +10,9 @@ Route::get('/register', function () {
    return view('startbootstrap.register');
 });
 Route::post('/register', [UsersController::class, 'create']);
-
+Route::get('/veremail', function () {
+   return view('mail.welcome');
+});
 
 
 
