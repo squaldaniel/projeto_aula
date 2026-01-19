@@ -2,6 +2,9 @@
 * This email was built using Tabular.
 * For more information, visit https://tabular.email
 -->
+<?php
+$linkemail = '#';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
 <head>
@@ -145,11 +148,11 @@ text-decoration: none
 </td></tr></table>
 </td></tr><tr><td><div class="t7" style="mso-line-height-rule:exactly;mso-line-height-alt:55px;line-height:55px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td align="center">
 <table class="t11" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="467" class="t10" style="width:467px;">
-<table class="t9" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t8"><h1 class="t6" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:52px;font-weight:700;font-style:normal;font-size:48px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px;">Seja bem Vindo a RPG World</h1></td></tr></table>
+<table class="t9" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t8"><h1 class="t6" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:52px;font-weight:700;font-style:normal;font-size:48px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:1px;">Seja bem Vindo ao SISTEMA</h1></td></tr></table>
 </td></tr></table>
 </td></tr><tr><td><div class="t12" style="mso-line-height-rule:exactly;mso-line-height-alt:30px;line-height:30px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td align="center">
 <table class="t17" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="542" class="t16" style="width:542px;">
-<table class="t15" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t14"><p class="t13" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:500;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:justify;mso-line-height-rule:exactly;mso-text-raise:3px;">Você precisa ativar sua conta, clicando no link abaixo, para poder criar seu avatar.</p></td></tr></table>
+<table class="t15" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t14"><p class="t13" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:30px;font-weight:500;font-style:normal;font-size:20px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:justify;mso-line-height-rule:exactly;mso-text-raise:3px;">Você precisa ativar sua conta, clicando no link abaixo, para poder ativar seu usuário.</p></td></tr></table>
 </td></tr></table>
 </td></tr><tr><td align="center">
 <table class="t22" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="542" class="t21" style="width:542px;">
@@ -161,7 +164,7 @@ text-decoration: none
 </td></tr></table>
 </td></tr><tr><td><div class="t28" style="mso-line-height-rule:exactly;mso-line-height-alt:50px;line-height:50px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td align="center">
 <table class="t33" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="584" class="t32" style="width:584px;">
-<table class="t31" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t30"><p class="t29" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:25px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#666666;text-align:justify;mso-line-height-rule:exactly;mso-text-raise:4px;">|em anexo segue nossa proposta e&nbsp;</p></td></tr></table>
+<table class="t31" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t30"><p class="t29" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:25px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#666666;text-align:justify;mso-line-height-rule:exactly;mso-text-raise:4px;"><a href=<?php echo $linkemail?>">Ativar</a>&nbsp;</p></td></tr></table>
 </td></tr></table>
 </td></tr><tr><td><div class="t34" style="mso-line-height-rule:exactly;mso-line-height-alt:125px;line-height:125px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr></table></td></tr></table>
 </td>
@@ -174,11 +177,11 @@ text-decoration: none
 <tr class="t60"><td></td><td class="t59" width="600" valign="middle">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="t58" style="width:100%;"><tr><td class="t57" style="background-color:#E3EFFA;background-image:none;background-repeat:repeat;background-size:auto;background-position:center center;padding:40px 0 40px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100% !important;"><tr><td align="center">
 <table class="t50" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="350" class="t49" style="width:350px;">
-<table class="t48" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t47"><p class="t46" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:19px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;">Devs Numeber One é propriedade intelectial da KINGKERNEL, desenvolvido por Daniel J. Santos (Daniels Hogans)</p></td></tr></table>
+<table class="t48" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t47"><p class="t46" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:19px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;">Desenvolvido por Daniel J. Santos (Daniels Hogans)</p></td></tr></table>
 </td></tr></table>
 </td></tr><tr><td><div class="t51" style="mso-line-height-rule:exactly;mso-line-height-alt:20px;line-height:20px;font-size:1px;display:block;">&nbsp;&nbsp;</div></td></tr><tr><td align="center">
 <table class="t56" role="presentation" cellpadding="0" cellspacing="0" style="Margin-left:auto;Margin-right:auto;"><tr><td width="350" class="t55" style="width:350px;">
-<table class="t54" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t53"><p class="t52" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:19px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;">KINGKERNEL - DATE()</p></td></tr></table>
+<table class="t54" role="presentation" cellpadding="0" cellspacing="0" width="100%" style="width:100%;"><tr><td class="t53"><p class="t52" style="margin:0;Margin:0;font-family:Fira Sans,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;line-height:19px;font-weight:400;font-style:normal;font-size:12px;text-decoration:none;text-transform:none;direction:ltr;color:#000000;text-align:center;mso-line-height-rule:exactly;mso-text-raise:2px;">KINGKERNEL - <?php echo date('Y'); ?></p></td></tr></table>
 </td></tr></table>
 </td></tr></table></td></tr></table>
 </td>

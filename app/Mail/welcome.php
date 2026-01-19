@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use App\Models\UsersModel;
 
 class welcome extends Mailable
 {
@@ -16,9 +17,11 @@ class welcome extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $email;
+
+    public function __construct($email)
     {
-        //
+        $this->email = $email;
     }
 
     /**
@@ -27,7 +30,7 @@ class welcome extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Welcome',
+            subject: 'Ative seu usuário no sistema',
         );
     }
 
@@ -36,6 +39,8 @@ class welcome extends Mailable
      */
     public function content(): Content
     {
+        $user = UsersModel::where('email', $this->email)->first();
+        dd($user);
         return new Content(
             view: 'mail.welcome',
         );

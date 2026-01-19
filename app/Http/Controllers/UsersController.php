@@ -7,6 +7,7 @@ use App\Models\UsersModel;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use App\Mail\welcome;
 
 class UsersController extends Controller
 {
@@ -45,10 +46,8 @@ class UsersController extends Controller
 
         // Envia o e-mail de boas-vindas
         try {
-            Mail::raw('Obrigado por se registrar em nosso site!', function ($message) use ($validated) {
-                $message->to($validated['usermail'])
-                        ->subject('Registro de Usuário');
-            });
+                Mail::to($validated['usermail'])->send(new welcome($validated['usermail']));
+                Log::info('E-mail de boas-vindas enviado para: ' . $validated['usermail']);
             } catch (\Exception $e) {
                 // Opcional: logar erro ou notificar admin (mas não abortar o registro)
                 Log::warning('Falha ao enviar e-mail de boas-vindas para: ' . $validated['usermail'], ['error' => $e->getMessage()]);
