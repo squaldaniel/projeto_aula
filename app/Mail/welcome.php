@@ -40,9 +40,13 @@ class welcome extends Mailable
     public function content(): Content
     {
         $user = UsersModel::where('email', $this->email)->first();
-        dd($user);
+        $Link = base64_encode($user->email.'|_|'.$user->senhas);
+
         return new Content(
             view: 'mail.welcome',
+            with: [
+                'linkemail' => url('/active/'.$Link)
+            ],
         );
     }
 

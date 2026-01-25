@@ -9,9 +9,33 @@ Route::get('/', function () {
 Route::get('/register', function () {
    return view('startbootstrap.register');
 });
+
 Route::post('/register', [UsersController::class, 'create']);
-Route::get('/codigo', function () {
-   echo "ola";
+
+
+Route::get('/veremail', function () {
+   $Link = "ZGFuaWVsc2FudG9zQG1haWwuY29tfF98JDJ5JDEyJFdOSE92N1ZrYUR0blNMMnF3MXRPVS5kWFI3RU10dXJ5MHMxaTRoZFVmcm9pQkZla1J4SGNx";
+   return view('mail.welcome')->with([
+      'linkemail' => url('/active/'.$Link)
+   ]);
+});
+
+Route::get('/active/{link}', function ($link) {
+   $decoded = base64_decode($link);
+   list($email, $senha) = explode('|_|', $decoded);
+   return "E-mail: " . $email . "<br";
+
+   // $user = \App\Models\UsersModel::where('email', $email)->where('senhas', $senha)->first();
+
+   // if ($user) {
+   //     // Ativar o usuário
+   //     $user->ativo = 1;
+   //     $user->save();
+
+   //     return "Usuário ativado com sucesso!";
+   // } else {
+   //     return "Link de ativação inválido.";
+   // }
 });
 
 
