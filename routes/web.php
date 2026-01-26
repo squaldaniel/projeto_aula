@@ -2,49 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Models\UsersModel;
 
+# ------------------ ROTAS DO SISTEMA ------------------ #
+// Página inicial
 Route::get('/', function () {
    return view('startbootstrap.index');
 });
+// Página de registro de novo usuário
 Route::get('/register', function () {
    return view('startbootstrap.register');
 });
-
+// Rota de criação de novo usuário (POST
 Route::post('/register', [UsersController::class, 'create']);
 
+// Rota de ativação de usuário via e-mail
+Route::get('/active/{link}', [UsersController::class, 'activeuser']);
 
-Route::get('/veremail', function () {
-   $Link = "ZGFuaWVsc2FudG9zQG1haWwuY29tfF98JDJ5JDEyJFdOSE92N1ZrYUR0blNMMnF3MXRPVS5kWFI3RU10dXJ5MHMxaTRoZFVmcm9pQkZla1J4SGNx";
-   return view('mail.welcome')->with([
-      'linkemail' => url('/active/'.$Link)
-   ]);
+Route::get('ativado', function () {
+   return view('startbootstrap.ativado');
 });
 
-Route::get('/active/{link}', function ($link) {
-   $decoded = base64_decode($link);
-   list($email, $senha) = explode('|_|', $decoded);
-   return "E-mail: " . $email . "<br";
-
-   // $user = \App\Models\UsersModel::where('email', $email)->where('senhas', $senha)->first();
-
-   // if ($user) {
-   //     // Ativar o usuário
-   //     $user->ativo = 1;
-   //     $user->save();
-
-   //     return "Usuário ativado com sucesso!";
-   // } else {
-   //     return "Link de ativação inválido.";
-   // }
-});
-
-
-
-// Route::get('/users', [UsersController::class, 'index']);
-
-// Route::get('/{users}/status/{id}', function($users, $id){
-//     $sql = 'select user from users where id = ' . $id;
-//     $query = DB::select($sql);
-// });
-
-// Route::get('/{users}/status/{id}', [UsersController::class, 'showStatus']);

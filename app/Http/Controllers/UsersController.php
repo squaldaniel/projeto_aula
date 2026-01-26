@@ -56,4 +56,19 @@ class UsersController extends Controller
         // Redireciona com mensagem de sucesso (ex: para login)
         return redirect()->to('register')->with('success', 'Conta criada com sucesso! Verifique seu e-mail.');
     }
+    public function activeuser($link)
+    {
+        $decoded = base64_decode($link). '|_|aulas_de_hoje';
+        list($email, $senha) = explode('|_|', $decoded);
+
+        $user = UsersModel::where('email', $email)->where('senhas', $senha)->first();
+        if ($user) {
+            // Ativar o usuário
+            $user->active = 1;
+            $user->save();
+            return "Usuário ativado com sucesso!";
+        } else {
+            return "Link de ativação inválido.";
+        }
+    }
 }
