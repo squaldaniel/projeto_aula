@@ -23,3 +23,7 @@ Route::get('ativado', function () {
    return view('startbootstrap.ativado');
 });
 
+Route::get('landingpage', function () {
+   return view('freelancer.index');
+});
+
