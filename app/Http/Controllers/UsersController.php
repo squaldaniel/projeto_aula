@@ -61,12 +61,16 @@ class UsersController extends Controller
         $decoded = base64_decode($link). '|_|aulas_de_hoje';
         list($email, $senha) = explode('|_|', $decoded);
 
-        $user = UsersModel::where('email', $email)->where('senhas', $senha)->first();
+        $user = UsersModel::where('email', $email)
+                ->where('senhas', $senha)
+                ->where('active', 0)->first();
         if ($user) {
             // Ativar o usuário
             $user->active = 1;
             $user->save();
-            return "Usuário ativado com sucesso!";
+            return view('startbootstrap.ativado')->with([
+                "messageativacao" => "Ativado com sucesso o email:" . $user->email
+            ]);
         } else {
             return "Link de ativação inválido.";
         }
