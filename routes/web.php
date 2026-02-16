@@ -26,4 +26,7 @@ Route::get('ativado', function () {
 Route::get('landingpage', function () {
    return view('freelancer.index');
 });
+Route::get('landingpage2', function () {
+   return view('freelancer.page');
+});
 
