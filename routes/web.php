@@ -17,7 +17,8 @@ Route::get('/register', function () {
 Route::get('/login', function () {
    return view('startbootstrap.login');
 });
-Route::post('/login', [UsersController::class, 'auth']);
+Route::post('/login', [UsersController::class, 'auth'])->name('login');
+Route::get('/logout', [UsersController::class, 'logout']);
 
 // Rota de criação de novo usuário (POST
 Route::post('/register', [UsersController::class, 'create']);
@@ -32,7 +33,7 @@ Route::get('ativado', function () {
 Route::get('landingpage', function () {
    return view('freelancer.index');
 });
-Route::get('landingpage2', function () {
-   return view('freelancer.page');
-});
+// Route::get('landingpage2', function () {
+//    return view('freelancer.page');
+// });
 

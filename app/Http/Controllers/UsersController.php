@@ -7,6 +7,7 @@ use App\Models\UsersModel;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use App\Mail\welcome;
 
 class UsersController extends Controller
@@ -75,9 +76,21 @@ class UsersController extends Controller
     }
     public function auth(Request $request)
     {
-        return  $request->all();
-        // return UsersModel::where('email', )->toSql();
-        // $_POST['testecontroller'] = "funcionou";
-        // return $_POST;
+        $user = UsersModel::where('active', 1)
+                ->where('email', $request->email)
+                ->first();
+        if ($user && Hash::check($request->senhas, $user->senhas)) {
+            // Autenticação bem-sucedida
+            $user = Session::put('user', $user);
+            return redirect()->to('landingpage');
+        } else {
+            // Falha na autenticação
+            return ['falha ao logar'] ;
+        }
+    }
+    public function logout()
+    {
+        Session::forget('user');
+        return redirect()->to('login');
     }
 }
