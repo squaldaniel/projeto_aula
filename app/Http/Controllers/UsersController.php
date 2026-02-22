@@ -19,8 +19,6 @@ class UsersController extends Controller
     {
         return 'você quer ver o ' . $users . ' de id ' . $id;
     }
-
-
     public function create(Request $request)
     {
         // Validação dos dados
@@ -74,5 +72,12 @@ class UsersController extends Controller
         } else {
             return "Link de ativação inválido.";
         }
+    }
+    public function auth(Request $request)
+    {
+        return  $request->all();
+        // return UsersModel::where('email', )->toSql();
+        // $_POST['testecontroller'] = "funcionou";
+        // return $_POST;
     }
 }

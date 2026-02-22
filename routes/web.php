@@ -13,6 +13,12 @@ Route::get('/', function () {
 Route::get('/register', function () {
    return view('startbootstrap.register');
 });
+// rotas de login
+Route::get('/login', function () {
+   return view('startbootstrap.login');
+});
+Route::post('/login', [UsersController::class, 'auth']);
+
 // Rota de criação de novo usuário (POST
 Route::post('/register', [UsersController::class, 'create']);
 
